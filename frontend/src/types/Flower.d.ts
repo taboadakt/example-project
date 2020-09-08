@@ -1,6 +1,6 @@
 interface IFlower {
-  id: String
-  name: String
+  id: String;
+  name: String;
 }
 
 export default IFlower;
