@@ -7,9 +7,7 @@ import { constructTestServer } from './__utils';
 const GET_FLOWERS = gql`
   query {
     flowers {
-      id
       name
-      createdAt
     }
   }
 `;
@@ -17,11 +15,8 @@ const GET_FLOWERS = gql`
 const GET_FAMILIES = gql`
   query {
     families {
-      id
       name
-      createdAt
       flowers {
-        id
         name
       }
     }
