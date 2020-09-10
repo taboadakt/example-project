@@ -23,6 +23,8 @@ This is boilerplate code for a Full Stack application.
 2. (UI) Currently, there is a bug. If a flower is added it does not show up on the family page unless you refresh. Can you fix this so it shows up immediately?
 3. (UI) Currently, the flowers have CreatedAt timestamps in their data but we do not display them in the UI. Can you add those to the UI list text and show it in a standard human readable format?
 4. (Server) Currently, you can only add or remove flowers and/or families, can you add functionality to update them?
+5. (Server) Currently, there are server integration tests for queries only, can you also add tests for mutations?
+6. (UI) Currently, there are tests for the different Flower and Families tabs render, can you add a new test for adding a flower then testing the flowers view output?
 
 ### Medium Effort Tasks:
 > 10-30 minute expectation
