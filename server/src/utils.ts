@@ -8,15 +8,27 @@ export interface StoreInterface {
   Flower: ModelCtor<any>;
 }
 
-export const createStore = () => {
-  const db = new Sequelize('sqlite::memory', { logging: false });
+export const createStore = async (): Promise<Sequelize> => {
+  return new Sequelize('sqlite::memory', { logging: false });
+};
 
+export const addStoreSchema = async (
+  db: Sequelize
+): Promise<StoreInterface> => {
   const Family = generateFamilyModel(db);
   const Flower = generateFlowerModel(db);
-  db.sync().then(() => {
-    Family.bulkCreate(require('./data-sources/models/family/family-data.json'));
-    Flower.bulkCreate(require('./data-sources/models/flower/flower-data.json'));
-  });
-
+  await db.sync();
   return { db, Family, Flower };
+};
+
+export const dbLoadTestData = async (
+  store: StoreInterface
+): Promise<StoreInterface> => {
+  await store.Family.bulkCreate(
+    require('./data-sources/models/family/family-data.json')
+  );
+  await store.Flower.bulkCreate(
+    require('./data-sources/models/flower/flower-data.json')
+  );
+  return store;
 };

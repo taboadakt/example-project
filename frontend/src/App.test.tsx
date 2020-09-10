@@ -1,19 +1,17 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import {render} from 'react-dom';
 import { act } from "react-dom/test-utils";
 import App from "./App";
 import { MockedProvider } from "@apollo/client/testing";
 
 test("Render Top Level App", async () => {
-  let AppElement;
-
+  let container = document.createElement('div');
   act(() => {
-    AppElement = render(
+    render(
       <MockedProvider mocks={[]}>
         <App />
-      </MockedProvider>
+      </MockedProvider>, container
     );
   });
-
-  expect(AppElement).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });

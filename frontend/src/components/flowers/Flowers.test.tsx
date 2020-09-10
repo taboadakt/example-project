@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render } from "react-dom";
 import {act} from "react-dom/test-utils";
 import { MockedProvider } from "@apollo/client/testing";
 import Flowers, {GET_FLOWERS_QUERY} from "./Flowers";
@@ -23,26 +23,26 @@ const mocks = [
 ];
 
 test("Render Flowers Load State", () => {
-    let FlowersLoadingElements;
+    let container = document.createElement('div');
     act(() => {
-        FlowersLoadingElements = render(
+        render(
             <MockedProvider mocks={mocks} addTypename={false}>
                 <Flowers />
-            </MockedProvider>
+            </MockedProvider>, container
         );
     })
-    expect(FlowersLoadingElements).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
 });
 
 test("Render Flowers Final State", async () => {
-    let FlowersFinalState;
-    await act(async () => {
-        FlowersFinalState = render(
+    let container = document.createElement('div');
+    act(() => {
+        render(
             <MockedProvider mocks={mocks} addTypename={false}>
                 <Flowers />
-            </MockedProvider>
+            </MockedProvider>, container
         );
-        await new Promise((resolve) => setTimeout(resolve, 0)); // wait for response
     })
-    expect(FlowersFinalState).toMatchSnapshot();
+    await new Promise((resolve) => setTimeout(resolve, 0)); // wait for response
+    expect(container).toMatchSnapshot();
 });

@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import {render} from 'react-dom';
 import { MockedProvider } from "@apollo/client/testing";
 import { act } from "react-dom/test-utils";
 import Family, { GET_FAMILIES_QUERY } from "./Family";
@@ -15,26 +15,26 @@ const mocks = [
 ];
 
 test("Render Family Load State", () => {
-  let FamilyLoadingElements;
+  let container = document.createElement('div');
   act(() => {
-    FamilyLoadingElements = render(
+    render(
       <MockedProvider mocks={mocks} addTypename={false}>
         <Family />
-      </MockedProvider>
+      </MockedProvider>, container
     );
   });
-  expect(FamilyLoadingElements).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test("Render Family Final State", async () => {
-  let FamilyFinalState;
-  await act(async () => {
-    FamilyFinalState = render(
+  let container = document.createElement('div');
+  act(() => {
+    render(
       <MockedProvider mocks={mocks} addTypename={false}>
         <Family />
-      </MockedProvider>
+      </MockedProvider>, container
     );
-    await new Promise((resolve) => setTimeout(resolve, 0)); // wait for response
   });
-  expect(FamilyFinalState).toMatchSnapshot();
+  await new Promise((resolve) => setTimeout(resolve, 0)); // wait for response
+  expect(container).toMatchSnapshot();
 });

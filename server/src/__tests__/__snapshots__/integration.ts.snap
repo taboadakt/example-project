@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Queries fetches a list of families 1`] = `
+Object {
+  "data": Object {
+    "families": Array [
+      Object {
+        "createdAt": 2020-09-10T17:48:23.782Z,
+        "flowers": Array [
+          Object {
+            "id": "41648617-336a-4374-9d46-7e66a1b0ef6d",
+            "name": "Irises",
+          },
+          Object {
+            "id": "cce8ec16-9e5e-4a6a-a6cd-fe5283bddf66",
+            "name": "Gladiolus",
+          },
+          Object {
+            "id": "686c4c66-7afb-415d-b4cc-4d9d637c30ad",
+            "name": "Coppertips",
+          },
+          Object {
+            "id": "413c7b8a-d3c2-43c8-82a7-507055260b1c",
+            "name": "Freesia",
+          },
+        ],
+        "id": "7d3860e9-d5ab-49b0-ae5c-17444e2e5332",
+        "name": "Iridaceae",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.783Z,
+        "flowers": Array [
+          Object {
+            "id": "b62a3275-e9db-4311-b69f-ebcf295dbbe0",
+            "name": "Bellflowers",
+          },
+          Object {
+            "id": "aa5d2dae-b0fe-4692-96d5-6551a7c224c9",
+            "name": "Platycodon grandiflorus",
+          },
+        ],
+        "id": "277f376c-87f6-45b5-a9db-3b2254cc65b4",
+        "name": "Campanulaceae",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.783Z,
+        "flowers": Array [
+          Object {
+            "id": "62eb1ef9-480b-49ed-8210-f30eebca1751",
+            "name": "Lily",
+          },
+          Object {
+            "id": "879a2e9a-e91d-4855-9087-58e7e02b91c3",
+            "name": "Tulip",
+          },
+          Object {
+            "id": "054e9833-0658-4d62-9428-82e3e0c9ce13",
+            "name": "Fritillaries",
+          },
+          Object {
+            "id": "d738a4e4-3dc7-4d3e-a8d3-3e360fbc3f03",
+            "name": "Fawn lilies",
+          },
+        ],
+        "id": "79ed8513-1482-45a1-b0f9-3845c3219a87",
+        "name": "Liliaceae",
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`Queries fetches a list of flowers 1`] = `
+Object {
+  "data": Object {
+    "flowers": Array [
+      Object {
+        "createdAt": 2020-09-10T17:48:23.788Z,
+        "id": "41648617-336a-4374-9d46-7e66a1b0ef6d",
+        "name": "Irises",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.788Z,
+        "id": "cce8ec16-9e5e-4a6a-a6cd-fe5283bddf66",
+        "name": "Gladiolus",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.788Z,
+        "id": "686c4c66-7afb-415d-b4cc-4d9d637c30ad",
+        "name": "Coppertips",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.788Z,
+        "id": "413c7b8a-d3c2-43c8-82a7-507055260b1c",
+        "name": "Freesia",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.788Z,
+        "id": "b62a3275-e9db-4311-b69f-ebcf295dbbe0",
+        "name": "Bellflowers",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.788Z,
+        "id": "aa5d2dae-b0fe-4692-96d5-6551a7c224c9",
+        "name": "Platycodon grandiflorus",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.788Z,
+        "id": "62eb1ef9-480b-49ed-8210-f30eebca1751",
+        "name": "Lily",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.789Z,
+        "id": "879a2e9a-e91d-4855-9087-58e7e02b91c3",
+        "name": "Tulip",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.789Z,
+        "id": "054e9833-0658-4d62-9428-82e3e0c9ce13",
+        "name": "Fritillaries",
+      },
+      Object {
+        "createdAt": 2020-09-10T17:48:23.789Z,
+        "id": "d738a4e4-3dc7-4d3e-a8d3-3e360fbc3f03",
+        "name": "Fawn lilies",
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
