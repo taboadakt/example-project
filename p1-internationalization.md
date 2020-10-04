@@ -1,12 +1,33 @@
-# Internationalization 
+# Internationalization
 
-Our flower shop is expanding! We will need to support stores in Spain ASAP. Complete each task listed below to internationalize your site. 
+Our flower shop is expanding! We will need to support stores in Spain
+ASAP. Staholders have a series of requirements around this new market
+strategy.
 
-1. (UI) Add a column to the flowers table to display the `createdAt` date and time. Format the date and time in a way that's readable to a typical user. 
-2. (fullstack) We would like to make the `createdAt` editable. Add an edit button next to the `createdAt` field that allows the user to edit using text input for the time and a calender to edit the date. 
-3. (fullstack) Allow the user to also edit the `createdAt` date/time when they are adding a flower. 
-4. (fullstack) Create a language selector on the site, users should be able to choose between English or Spanish. The language on the site update instantly. Hint: take a close look at your date/time formats and your calendar. 
-5. (fullstack) Detect the country your user's browser is in to set the initial language that the site loads. 
-6. (UI) Update the URL so users can go to the `/usa` site or the `/sp` site. 
-7. (fullstack) Create a new page named `EMPLOYEES`. On this page you will be displaying a list of our employees which you can get from here http://dummy.restapiexample.com/. Display the employee's name. This page should only be displayed it the users are on the `/usa` site.
-8. (fullstack) Currently, users cannot add families. Add an `Add family` button to the Family tab. Only display the `Add family` button if the user is on the `/sp` site.  
+First, we need some way to differentiate languages and locations. The
+preferred universal approach is to combine ISO-639 with ISO-3166. We
+then need some kind of language selector for the site. Users should be
+able to choose between American English or Spanish. The language on
+the site should update instantly once the language/locale is
+selected. Make sure to detect the country your user's browser is in to
+set the initial language. Lastly, update the URL so users can go to
+directly to the specific language selected.
+
+Secondly, as part of the new internationalization effort, we will need
+to create a page for employees. On this page you will be displaying a
+list of our employees which you can get from this API
+http://dummy.restapiexample.com/. Display the employee's name on a
+list. Management only want to launch this page to the North American
+market for now so it shouldn't be available or accessible for users on
+any other location/language.
+
+Lastly, it has been brought to our product team's attention that
+showing the date the flower was created drives sales up. Change the
+the flowers page to display the date and time of creation of each
+flower. Format the date and time in a way that's readable to a typical
+user (humanize it). Make sure this is part of your
+internationalization strategy.
+
+(Bonus ask) Currently, users cannot add families. Add an "Add family"
+button to the family tab and make it functional. Business wants this
+feature to be rolled out in Spain first.
