@@ -6,6 +6,7 @@ import { MockedProvider } from "@apollo/client/testing";
 
 test("Render Top Level App", async () => {
   let container = document.createElement('div');
+  console.log('test');
   act(() => {
     render(
       <MockedProvider mocks={[]}>
